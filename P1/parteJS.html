@@ -239,3 +239,39 @@
     });
 
 </script>
+
+<script>//9
+    var t = document.getElementById('totale');
+    var x1 = document.getElementById('017f0fab-fc93-4ca6-9579-7d1853d80a06');
+    var y1 = document.getElementById('d501b838-f7ad-494e-a8c3-1d67f44b2039');
+    var y2 = document.getElementById('bba9e454-7f68-41a4-a0f3-58f70c9242ad');
+
+
+    x1.addEventListener("click", () => {
+        t.value = Number(t.value) + 1;
+         
+    });
+    
+
+    y1.addEventListener("click", () => {
+        t.value = Number(t.value) - 1;
+         
+    });
+
+    y2.addEventListener("click", () => {
+        t.value = Number(t.value) - 1;
+         
+    });
+
+</script>
+
+
+
+
+<script>//last display
+    var t = document.getElementById('totale');
+    var txt = document.getElementById('76eeda85-e788-4669-ab46-b08f4eccc655');
+
+    txt.innerHTML = t.value + " Punti!";
+
+    </script>
