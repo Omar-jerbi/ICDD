@@ -2,16 +2,20 @@
     const tot= document.createElement("button");
     
     tot.innerHTML = "0";
-    
     tot.setAttribute('id', 'totale');
     tot.setAttribute('value', 0);
     
     document.body.appendChild(tot);
 
 
+    const d = new Date();
+    const oraI = document.createElement("button");
+    oraI.setAttribute('id', 'oraInizio');
+    oraI.value = d.toString();
+
+    document.body.appendChild(oraI);
 
 </script>
-
 
 
 <script>//1
@@ -267,11 +271,63 @@
 
 
 
+<!-- penultimo -->
+<script src="https://smtpjs.com/v3/smtp.js"></script> 
+<script> //input text
+    var x = document.createElement('INPUT');
+    
+    x.setAttribute('type', 'text');
+    // x.setAttribute('id', 'nomeScuolaClasse');
+    x.setAttribute('placeholder', 'Scuola + classe');
+    
+    document.body.appendChild(x);
+    
+    x.style.marginLeft = "-90vw";
+    x.style.zIndex = 10;
+    x.style.height = "10vh";
+    x.style.width = "80vw";
+    x.style.fontSize = "4vh";
+    
+    var btt = document.getElementById('4744cf07-872a-43e8-b399-60d85f0b12d9');
+    
+    btt.addEventListener('click', () =>{
+        //mando mail
+            var t = document.getElementById('totale');
+            var oi = document.getElementById('oraInizio');
+
+            const oraF = new Date();
+
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "uni2022icl@gmail.com",
+                Password: "icl2022uni",
+                To: 'uni2022icl@gmail.com',
+                From: "uni2022icl@gmail.com",
+                Subject: x.value.toString(),
+                Body: t.value.toString() + " <br> " + oi.value.toString() + " <br> " + oraF.toString(),
+            })
+            .then(function (message) {
+                //alert("mail sent successfully")
+            });
+    
+    
+        //nascondo input text
+        x.style.opacity = 0;
+        x.style.zIndex = -100;
+    });
+    
+</script>
+
+
+
 
 <script>//last display
     var t = document.getElementById('totale');
     var txt = document.getElementById('76eeda85-e788-4669-ab46-b08f4eccc655');
 
-    txt.innerHTML = t.value + " Punti!";
+    txt.innerHTML = t.value +" Punti!";
 
-    </script>
+</script>
+
+
+
