@@ -26,29 +26,38 @@
     var y2 = document.getElementById('6e6a6f9a-369f-4813-acb6-89f01fbfb1ba');
     var y3 = document.getElementById('37f2a41d-b182-46e4-9ed9-f3822ea9d3a9');
 
+    
+    var click = true;
 
     x1.addEventListener("click", () => {
-        t.value = Number(t.value) + 1;
-         
+        if(click){
+            t.value = Number(t.value) + 1;
+            click = false;
+        }
     });
     
 
     y1.addEventListener("click", () => {
-        t.value = Number(t.value) - 1;
-         
+        if(click){
+            t.value = Number(t.value) - 1;
+            click = false;
+        }
     });
 
     y2.addEventListener("click", () => {
-        t.value = Number(t.value) - 1;
-         
+        if(click){
+            t.value = Number(t.value) - 1;   
+            click = false;
+        }
     });
 
     y3.addEventListener("click", () => {
-        t.value = Number(t.value) - 1;
-         
+        if(click){
+            t.value = Number(t.value) - 1;
+            click = false;
+        }
     });
 </script>
-
 
 
 <script>//2
@@ -57,21 +66,16 @@
     var y1 = document.getElementById('c04adcee-46bd-46c7-9f5e-8b43b48704ba');
     var y2 = document.getElementById('a6c39821-833f-4738-9b63-d8db176e9102');
 
-
     x1.addEventListener("click", () => {
         t.value = Number(t.value) + 1;
-         
     });
     
-
     y1.addEventListener("click", () => {
         t.value = Number(t.value) - 1;
-         
     });
 
     y2.addEventListener("click", () => {
         t.value = Number(t.value) - 1;
-         
     });
 
 </script>
@@ -86,18 +90,15 @@
 
     x1.addEventListener("click", () => {
         t.value = Number(t.value) + 1;
-         
     });
     
 
     y1.addEventListener("click", () => {
         t.value = Number(t.value) - 1;
-         
     });
 
     y2.addEventListener("click", () => {
         t.value = Number(t.value) - 1;
-         
     });
 
 </script>
@@ -110,23 +111,19 @@
 
 
     x1.addEventListener("click", () => {
-        t.value = Number(t.value) + 1;
-         
+        t.value = Number(t.value) + 1; 
     });
     
 
     y1.addEventListener("click", () => {
-        t.value = Number(t.value) - 1;
-         
+        t.value = Number(t.value) - 1; 
     });
 
     y2.addEventListener("click", () => {
-        t.value = Number(t.value) - 1;
-         
+        t.value = Number(t.value) - 1; 
     });
 
 </script>
-
 
 
 <script>//5
@@ -268,7 +265,6 @@
     });
 
 </script>
-
 
 
 <script>//10
