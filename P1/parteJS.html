@@ -462,17 +462,18 @@
     var x = document.createElement('INPUT');
     
     x.setAttribute('type', 'text');
-    // x.setAttribute('id', 'nomeScuolaClasse');
     x.setAttribute('placeholder', 'Scuola + classe');
     
     document.body.appendChild(x);
     
-    x.style.marginLeft = "-90vw";
+    x.style.position = "absolute";
+    x.style.marginLeft = "10vw";
+    x.style.marginTop = "-215vh";
     x.style.zIndex = 10;
     x.style.height = "10vh";
-    x.style.width = "80vw";
+    x.style.width = "75vw";
     x.style.fontSize = "4vh";
-    
+
     var btt = document.getElementById('4744cf07-872a-43e8-b399-60d85f0b12d9');
     
     btt.addEventListener('click', () =>{
