@@ -1,10 +1,7 @@
 <script>//0 //init
     const tot= document.createElement("button");
-    
-    tot.innerHTML = "0";
     tot.setAttribute('id', 'totale');
     tot.setAttribute('value', 0);
-    
     document.body.appendChild(tot);
 
 
@@ -12,14 +9,21 @@
     const oraI = document.createElement("button");
     oraI.setAttribute('id', 'oraInizio');
     oraI.value = d.toString();
-
     document.body.appendChild(oraI);
+
+    const log = document.createElement("button");
+    log.setAttribute('id', 'log');
+    log.innerHTML = '';
+    log.style.display = "none"
+    document.body.appendChild(log);
 
 </script>
 
 
 <script>//1
     var t = document.getElementById('totale');
+    var log = document.getElementById('log');
+
     var x1 = document.getElementById('42001c78-ec6d-41f3-ab68-68fb2c162e48');
     
     var y1 = document.getElementById('37a68dd8-971b-4384-bc82-bf05275eb6e9');
@@ -32,6 +36,7 @@
     x1.addEventListener("click", () => {
         if(click){
             t.value = Number(t.value) + 1;
+            log.innerHTML = "1 OK: " + x1.innerHTML;        
             click = false;
         }
     });
@@ -40,6 +45,7 @@
     y1.addEventListener("click", () => {
         if(click){
             t.value = Number(t.value) - 1;
+            log.innerHTML = "1 KO: " + y1.innerHTML;        
             click = false;
         }
     });
@@ -47,6 +53,7 @@
     y2.addEventListener("click", () => {
         if(click){
             t.value = Number(t.value) - 1;   
+            log.innerHTML = "1 KO: " + y2.innerHTML;        
             click = false;
         }
     });
@@ -54,6 +61,7 @@
     y3.addEventListener("click", () => {
         if(click){
             t.value = Number(t.value) - 1;
+            log.innerHTML = "1 KO: " + y3.innerHTML;        
             click = false;
         }
     });
@@ -62,20 +70,38 @@
 
 <script>//2
     var t = document.getElementById('totale');
+    var log = document.getElementById('log');
+
     var x1 = document.getElementById('fc37605b-73c5-45e3-b767-5e51017e5279');
     var y1 = document.getElementById('c04adcee-46bd-46c7-9f5e-8b43b48704ba');
     var y2 = document.getElementById('a6c39821-833f-4738-9b63-d8db176e9102');
 
+
+
+    var click = true;
+
     x1.addEventListener("click", () => {
-        t.value = Number(t.value) + 1;
+        if(click){
+            t.value = Number(t.value) + 1;
+            log.innerHTML = log.innerHTML + "<br> 2 OK: immagine 1";
+            click = false;
+        }
     });
     
     y1.addEventListener("click", () => {
-        t.value = Number(t.value) - 1;
+        if(click){
+            t.value = Number(t.value) - 1;
+            log.innerHTML = log.innerHTML + "<br> 2 KO: immagine 2" ;
+            click = false;
+        }
     });
 
     y2.addEventListener("click", () => {
-        t.value = Number(t.value) - 1;
+        if(click){
+            t.value = Number(t.value) - 1;
+            log.innerHTML = log.innerHTML + "<br> 2KO: immagine 3";
+            click = false;
+        }
     });
 
 </script>
@@ -83,48 +109,80 @@
 
 <script>//3
     var t = document.getElementById('totale');
+    var log= document.getElementById('log');
+
     var x1 = document.getElementById('e0a3fa57-cea7-4289-9cad-b21d8587004c');
     var y1 = document.getElementById('26e4ec0b-af1f-4fdb-a81c-b64db80d72d9');
     var y2 = document.getElementById('99a77c78-ad62-4f28-af2c-21c87a9a7cca');
 
 
+    var click = true;
     x1.addEventListener("click", () => {
-        t.value = Number(t.value) + 1;
+        if(click){
+            t.value = Number(t.value) + 1;
+            log.innerHTML = log.innerHTML + "<br> 3 OK: immagine 3";
+            click = false;
+        }
     });
     
 
     y1.addEventListener("click", () => {
-        t.value = Number(t.value) - 1;
+        if(click){
+            t.value = Number(t.value) - 1;
+            log.innerHTML = log.innerHTML + "<br> 3 KO: immagine 1";
+            click = false;
+        }
     });
 
     y2.addEventListener("click", () => {
-        t.value = Number(t.value) - 1;
+        if(click){
+            t.value = Number(t.value) - 1;
+            log.innerHTML = log.innerHTML + "<br> 3 KO: immagine 2";
+            click = false;
+        }
     });
 
 </script>
+
 
 <script>//4
     var t = document.getElementById('totale');
+    var log= document.getElementById('log');
+    
     var x1 = document.getElementById('ee192b02-6896-43b7-bafc-6427641ebc32');
     var y1 = document.getElementById('24a9c1bd-00df-41cd-b5e6-5e36828b0b1e');
     var y2 = document.getElementById('f8bd397a-6fb0-473a-b30a-401014fd44fd');
-
-
+    
+    var click = true;
+    
     x1.addEventListener("click", () => {
-        t.value = Number(t.value) + 1; 
+        if(click){
+            t.value = Number(t.value) + 1;
+            log.innerHTML = log.innerHTML + "<br> 3 OK: " + x1.innerHTML;
+            click = false;
+        }
     });
     
-
+    
     y1.addEventListener("click", () => {
-        t.value = Number(t.value) - 1; 
+        if(click){
+            t.value = Number(t.value) - 1;
+            log.innerHTML = log.innerHTML + "<br> 3 KO: " + y1.innerHTML;
+            click = false;
+        } 
     });
-
+    
     y2.addEventListener("click", () => {
-        t.value = Number(t.value) - 1; 
+        if(click){
+            t.value = Number(t.value) - 1;
+            log.innerHTML = log.innerHTML + "<br> 3 KO: " + y2.innerHTML;
+            click = false;
+        } 
     });
 
 </script>
 
+<!--  -->
 
 <script>//5
     var t = document.getElementById('totale');
@@ -325,6 +383,7 @@
         //mando mail
             var t = document.getElementById('totale');
             var oi = document.getElementById('oraInizio');
+            var log = document.getElementById('log');
 
             const oraF = new Date();
 
@@ -335,7 +394,7 @@
                 To: 'uni2022icl@gmail.com',
                 From: "uni2022icl@gmail.com",
                 Subject: x.value.toString(),
-                Body: "scuola e classe: "+x.value.toString()+" <br> punteggio: "+t.value.toString() + " <br> Inizio: " + oi.value.toString() + " <br> Fine: " + oraF.toString(),
+                Body: "scuola e classe: "+x.value.toString()+" <br> punteggio: "+t.value.toString() + " <br> Inizio: " + oi.value.toString() + " <br> Fine: " + oraF.toString() + " <br> Log: <br>" + log.innerHTML.toString(),
             })
             .then(function (message) {
                 //alert("mail sent successfully")
